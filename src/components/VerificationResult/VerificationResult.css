@@ -1,0 +1,61 @@
+.result-card {
+  max-width: 450px;
+  margin: 30px auto;
+  padding: 25px 30px;
+  background: linear-gradient(145deg, #0b0f3d, #141a5a);
+  border-radius: 16px;
+  border: 2px solid #ffd700;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+  color: #f5f0e1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-family: "Georgia", serif;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+.result-card:hover {
+  box-shadow: 0 15px 30px rgba(255, 215, 0, 0.5);
+  transform: translateY(-2px);
+}
+
+.result-title {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: #ffd700;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.result-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.result-card strong {
+  color: #ffd700;
+}
+
+.result-link {
+  color: #ffd700;
+  text-decoration: underline;
+  transition: all 0.2s ease-in-out;
+}
+
+.result-link:hover {
+  color: #e6c200;
+  text-shadow: 0 0 8px #ffd700;
+}
+
+.result-error {
+  max-width: 450px;
+  margin: 30px auto;
+  padding: 20px;
+  text-align: center;
+  color: #ff4d4d;
+  background: #2b0d0d;
+  border-radius: 12px;
+  font-weight: bold;
+}
