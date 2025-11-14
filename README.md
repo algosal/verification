@@ -36,29 +36,6 @@ This system allows recipients or agencies to confirm authenticity instantly.
 
 ---
 
-## 📦 Project Structure
-
-```
-
-verification/
-├── public/
-├── src/
-│ ├── components/
-│ │ ├── VerificationForm/
-│ │ │ ├── VerificationForm.jsx
-│ │ │ ├── VerificationForm.css
-│ │ │ ├── VerificationFormLogic.js
-│ │ ├── VerificationResult/
-│ │ │ ├── VerificationResult.jsx
-│ │ │ ├── VerificationResult.css
-│ ├── App.js
-│ ├── App.css
-├── package.json
-
-```
-
-Here is the **project structure section only**, now with **clean Unicode icons** so it looks polished and professional:
-
 ## 📁 Project Structure
 
 ```
