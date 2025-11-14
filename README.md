@@ -57,6 +57,31 @@ verification/
 
 ```
 
+Here is the **project structure section only**, now with **clean Unicode icons** so it looks polished and professional:
+
+```md
+## 📁 Project Structure
+```
+
+verification/
+├── 📂 public/
+├── 📂 src/
+│ ├── 📂 components/
+│ │ ├── 📂 VerificationForm/
+│ │ │ ├── 📄 VerificationForm.jsx
+│ │ │ ├── 🎨 VerificationForm.css
+│ │ │ ├── ⚙️ VerificationFormLogic.js
+│ │ ├── 📂 VerificationResult/
+│ │ │ ├── 📄 VerificationResult.jsx
+│ │ │ ├── 🎨 VerificationResult.css
+│ ├── 📄 App.js
+│ ├── 🎨 App.css
+├── 📄 package.json
+
+```
+
+```
+
 ---
 
 ## 🔧 Installation & Setup
