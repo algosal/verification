@@ -1,70 +1,169 @@
-# Getting Started with Create React App
+# ✅ **README.md**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+```md
+# Letter Verification System
 
-## Available Scripts
+A secure verification portal for official letters issued by **Salman Saeed**.  
+Each letter includes a unique verification number (UUID or manual code).  
+This system allows recipients or agencies to confirm authenticity instantly.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 🔹 Frontend (React)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Clean, professional “royal” UI
+- Verification form with live API lookup
+- Animated, gold-accent visual theme
+- Displays verification status (valid, revoked, pending, error)
+- Shows recipient, subject, date, and notes
+- Works on mobile and desktop
 
-### `npm test`
+### 🔹 Backend (PHP + MySQL)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Lightweight REST API endpoint
+- Validates verification codes
+- Returns structured JSON
+- Supports UUID-based verification numbers
+- MySQL table includes:
+  - verification number
+  - recipient name/title
+  - subject
+  - date sent
+  - file URL
+  - notes
+  - status: valid / revoked / pending
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📦 Project Structure
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+verification/
+├── public/
+├── src/
+│ ├── components/
+│ │ ├── VerificationForm/
+│ │ │ ├── VerificationForm.jsx
+│ │ │ ├── VerificationForm.css
+│ │ │ ├── VerificationFormLogic.js
+│ │ ├── VerificationResult/
+│ │ │ ├── VerificationResult.jsx
+│ │ │ ├── VerificationResult.css
+│ ├── App.js
+│ ├── App.css
+├── package.json
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+````
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🔧 Installation & Setup
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 1️⃣ Clone Repo
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```sh
+git clone https://github.com/algosal/verification.git
+cd verification
+````
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 2️⃣ Install Dependencies
 
-## Learn More
+```sh
+npm install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 3️⃣ Run Development Server
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```sh
+npm start
+```
 
-### Code Splitting
+Your app will be running at:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+http://localhost:3000
+```
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🗄️ API Endpoint
 
-### Making a Progressive Web App
+The verification API is hosted at:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```
+https://salmansaeed.us/verification/api/verify.php?code=YOUR_CODE_HERE
+```
 
-### Advanced Configuration
+### Example Response
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```json
+{
+  "status": "valid",
+  "verification_number": "6267250010",
+  "recipient_name": "Commander Keith Koster",
+  "recipient_title": "Commander, American Legion Department of New York",
+  "subject": "Letter of Appreciation",
+  "date_sent": "2025-11-11",
+  "file_url": null,
+  "notes": null
+}
+```
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🛢️ Database Schema
 
-### `npm run build` fails to minify
+```sql
+CREATE TABLE letters (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  verification_number VARCHAR(50) UNIQUE NOT NULL,
+  recipient_name VARCHAR(100),
+  recipient_title VARCHAR(100),
+  date_sent DATE,
+  subject VARCHAR(200),
+  status VARCHAR(20) DEFAULT 'valid',
+  file_url VARCHAR(300),
+  notes TEXT
+);
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## 🌐 Deployment
+
+Your `package.json` already includes:
+
+```json
+"homepage": "https://salmansaeed.us"
+```
+
+To build for production:
+
+```sh
+npm run build
+```
+
+Upload the contents of the `build/` folder to your hosting environment.
+
+---
+
+## 🛡️ Purpose
+
+This verification system is designed to ensure:
+
+- Authenticity of outgoing correspondence
+- Public trust
+- Transparency
+- Administrative accuracy
+
+Each letter issued by **Salman Saeed** carries a verification watermark and number that can be confirmed here.
+
+---
+
+## 👑 Author
+
+**Salman Saeed**
+Visionary, Builder, Believer in Neville Goddard’s principles.
+Official Verification Portal — _Built to Last._
