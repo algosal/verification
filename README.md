@@ -38,6 +38,8 @@ This system allows recipients or agencies to confirm authenticity instantly.
 
 ## 📦 Project Structure
 
+```
+
 verification/
 ├── public/
 ├── src/
@@ -52,6 +54,8 @@ verification/
 │ ├── App.js
 │ ├── App.css
 ├── package.json
+
+```
 
 ---
 
