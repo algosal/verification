@@ -59,8 +59,8 @@ verification/
 
 Here is the **project structure section only**, now with **clean Unicode icons** so it looks polished and professional:
 
-```md
 ## 📁 Project Structure
+
 ```
 
 verification/
@@ -77,8 +77,6 @@ verification/
 │ ├── 📄 App.js
 │ ├── 🎨 App.css
 ├── 📄 package.json
-
-```
 
 ```
 
