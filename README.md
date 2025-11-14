@@ -1,7 +1,6 @@
 # ✅ **README.md**
 
-```md
-# Letter Verification System
+\# Letter Verification System
 
 A secure verification portal for official letters issued by **Salman Saeed**.  
 Each letter includes a unique verification number (UUID or manual code).  
@@ -38,7 +37,6 @@ This system allows recipients or agencies to confirm authenticity instantly.
 ---
 
 ## 📦 Project Structure
-```
 
 verification/
 ├── public/
