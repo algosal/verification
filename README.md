@@ -53,8 +53,6 @@ verification/
 │ ├── App.css
 ├── package.json
 
-````
-
 ---
 
 ## 🔧 Installation & Setup
@@ -64,7 +62,7 @@ verification/
 ```sh
 git clone https://github.com/algosal/verification.git
 cd verification
-````
+```
 
 ### 2️⃣ Install Dependencies
 
